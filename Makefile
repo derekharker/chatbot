@@ -1,5 +1,5 @@
 PYTHON := python3
-VENV := venv
+VENV := .venv
 PIP := $(VENV)/bin/pip
 POETRY := $(VENV)/bin/poetry
 PYTEST := $(VENV)/bin/pytest
@@ -9,6 +9,6 @@ setup: $(VENV)/bin/activate
 	@echo "Updating poetry lock file if necessary..."
 	$(POETRY) lock
 	$(POETRY) install
-	$(PIP) install -e .
+	$(PIP) install -e /externals/Maeser
 	@echo "Maeser setup complete. Running pytests..."
 	. $(VENV)/bin/activate && pytest tests
