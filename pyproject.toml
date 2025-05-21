@@ -3,6 +3,9 @@ name = "maeser"
 version = "0.1.3"
 description = "A package for building RAG chatbot applications for educational contexts."
 authors = ["Carson Bush <hyperdriveguy@byui.edu>", "Blaine Freestone <blainefreestone@gmail.com>"]
+packages = [
+    { include = "maeser", from = "externals/Maeser" }
+]
 include = [
     "externals/Maeser/maeser/data/*",
     "externals/Maeser/maeser/data/templates/*",

@@ -9,6 +9,6 @@ setup: $(VENV)/bin/activate
 	@echo "Updating poetry lock file if necessary..."
 	$(POETRY) lock
 	$(POETRY) install
-	$(PIP) install -e /externals/Maeser
+	$(PIP) install externals/Maeser
 	@echo "Maeser setup complete. Running pytests..."
-	. $(VENV)/bin/activate && pytest tests
+	. $(VENV)/bin/activate && pytest externals/Maeser/tests
